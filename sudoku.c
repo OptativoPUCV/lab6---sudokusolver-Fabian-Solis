@@ -60,7 +60,7 @@ List* get_adj_nodes(Node* n)
     {
       if(n -> sudo[f][c] == 0)
       {
-        for(int i = 1; i == 9; i++)
+        for(int i = 1; i <= 9; i++)
         {
           Node *newNode = copy(n);
           newNode -> sudo[f][c] = i;
