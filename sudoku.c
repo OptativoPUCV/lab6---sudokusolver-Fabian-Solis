@@ -43,9 +43,10 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node* n)
+{
 
-    return 1;
+  return 1;
 }
 
 
@@ -63,6 +64,7 @@ List* get_adj_nodes(Node* n)
         {
           Node *newNode = copy(n);
           newNode -> sudo[f][c] = i;
+          pushBack(list, newNode);
         }
       }
     }
@@ -70,7 +72,6 @@ List* get_adj_nodes(Node* n)
   
   return list;
 }
-
 
 int is_final(Node* n){
     return 0;
