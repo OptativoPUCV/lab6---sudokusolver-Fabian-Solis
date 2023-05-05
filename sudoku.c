@@ -45,12 +45,12 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int arrayFila[10] = {0};
-  int arrayCol[10] = {0};
-  int arraySub[10] = {0};
-
   for(int f = 0 ; f < 9 ; f++) 
   {
+    int arrayFila[10] = {0};
+    int arrayCol[10] = {0};
+    int arraySub[10] = {0};
+
     for(int c = 0 ; c < 9 ; c++) 
     {
       if(n->sudo[f][c] != 0) 
