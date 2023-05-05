@@ -47,9 +47,9 @@ int is_valid(Node* n)
 {
   for(int f = 0 ; f < 9 ; f++) 
   {
-    int arrayFila[10] = {0};
-    int arrayCol[10] = {0};
-    int arraySub[10] = {0};
+    int arrayFila[10];
+    int arrayCol[10];
+    int arraySub[10];
 
     for(int c = 0 ; c < 9 ; c++) 
     {
