@@ -65,7 +65,7 @@ int is_valid(Node* n)
       }
   
       int k = 3*(f/3) + c/3;
-      int p = 3*(f%3) + c%3
+      int p = 3*(f%3) + c%3;
   
       if(n->sudo[k][p] != 0) 
       {
@@ -75,7 +75,7 @@ int is_valid(Node* n)
     }
   }
   
-  return 1;
+  return ;
 }
 
 
