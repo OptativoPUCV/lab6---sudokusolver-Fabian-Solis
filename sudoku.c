@@ -49,7 +49,6 @@ int is_valid(Node* n)
 
   for(int f = 0 ; f < 9 ; f++) 
   {
-    
     for(int c = 0 ; c < 9 ; c++) 
     {
       if(n->sudo[f][c] != 0) 
@@ -64,8 +63,7 @@ int is_valid(Node* n)
         else arrayCol[n->sudo[f][c]] = 1;
       }
   
-      int k = 3*(f/3) + c/3;
-      int p = 3*(f%3) + c%3;
+
   
       if(n->sudo[k][p] != 0) 
       {
@@ -75,7 +73,7 @@ int is_valid(Node* n)
     }
   }
   
-  return ;
+  return 1;
 }
 
 
