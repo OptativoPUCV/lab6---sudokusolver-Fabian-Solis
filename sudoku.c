@@ -107,7 +107,7 @@ int is_final(Node* n)
 {
 
   
-  for(int i = 0 ; i < 9 ; i++) 
+  for(int f = 0 ; f < 9 ; f++) 
   {
     int arrayFila[10] = {0};
     int arrayCol[10] = {0};
@@ -120,22 +120,23 @@ int is_final(Node* n)
       arraySub[10] = {0};
     }
     
-    for(int j = 0 ; j < 9 ; j++) 
+    for(int c = 0 ; c < 9 ; c++) 
     {
 
-      if(n->sudo[i][j] != 0) 
+      if(n->sudo[f][c] != 0) 
       {
-        if(arrayFila[n->sudo[i][j]] == 1) return 0;
-        else arrayFila[n->sudo[i][j]] = 1;
+        if(arrayFila[n->sudo[f][c]] == 1) return 0;
+        else arrayFila[n->sudo[f][c]] = 1;
       }
 
-      if(n->sudo[j][i] != 0) 
+      if(n->sudo[f][c] != 0) 
       {
-        if(arrayCol[n->sudo[j][i]] == 1) return 0;
-        else arrayCol[n->sudo[j][i]] = 1;
+        if(arrayCol[n->sudo[f][c]] == 1) return 0;
+        else arrayCol[n->sudo[f][c]] = 1;
       }
       
-
+      int k = 3*(f/3) + c/3;
+      int p = 3*(f%3) + c%3;
 
       if(n->sudo[k][p] != 0) 
       {

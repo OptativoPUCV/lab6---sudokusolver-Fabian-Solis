@@ -208,3 +208,19 @@ sudoku.c:114:9: error: variable ‘arraySub’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 7c03b35
+Sun 07 May 2023 02:01:50 AM UTC: 
+ sudoku.c | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:118:23: error: expected expression before ‘{’ token
+  118 |       arrayFila[10] = {0};
+      |                       ^
+sudoku.c:119:22: error: expected expression before ‘{’ token
+  119 |       arrayCol[10] = {0};
+      |                      ^
+sudoku.c:120:22: error: expected expression before ‘{’ token
+  120 |       arraySub[10] = {0};
+      |                      ^
+Compilation failed
+78ff954
