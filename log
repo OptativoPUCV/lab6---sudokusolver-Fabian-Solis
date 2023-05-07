@@ -418,3 +418,17 @@ sudoku.c:123:7: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 7e9f346
+Sun 07 May 2023 03:16:11 AM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:149:3: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  149 |   return ;
+      |   ^~~~~~
+sudoku.c:123:7: note: declared here
+  123 | Node* DFS(Node* initial, int* cont)
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e1f4565

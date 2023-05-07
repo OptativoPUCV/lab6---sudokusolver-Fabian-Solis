@@ -131,9 +131,9 @@ Node* DFS(Node* initial, int* cont)
     Node* node = top(S);
     pop(S);
     
-    if (is_final(node) == 1) return nodo;
+    if (is_final(node) == 1) return node;
     
-    List* adj = get_adj_nodes(nodo);
+    List* adj = get_adj_nodes(node);
     Node* aux = first(adj);
     
     while(aux != NULL) 
@@ -142,7 +142,7 @@ Node* DFS(Node* initial, int* cont)
       aux = next(adj);
     }
     
-    free(nodo);
+    free(node);
     (*cont)++;
   }
   
