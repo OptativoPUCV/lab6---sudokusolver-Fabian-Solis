@@ -91,7 +91,7 @@ List* get_adj_nodes(Node* n)
 {
   List* list=createList();
 
-  for (int p = 1 ; p <= 9 ; p++) 
+  for (int i = 1 ; i <= 9 ; i++) 
   {
     Node* nodoAdyacente = copy(n);
     int validar = 0;
@@ -102,7 +102,7 @@ List* get_adj_nodes(Node* n)
       {
         if (n->sudo[f][c] == 0 && validar == 0) 
         {
-          nodoAdyacente->sudo[f][c] = p;
+          nodoAdyacente->sudo[f][c] = i;
           validar = 1;
         }
       }
