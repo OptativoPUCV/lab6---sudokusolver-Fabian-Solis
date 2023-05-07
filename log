@@ -262,3 +262,19 @@ Sun 07 May 2023 02:04:19 AM UTC:
  tests:  5|3
 total_score: 35/70
 e6f6ecf
+Sun 07 May 2023 02:07:07 AM UTC: 
+ sudoku.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:118:22: error: expected expression before ‘{’ token
+  118 |       arrayFila[x] = {0};
+      |                      ^
+sudoku.c:119:21: error: expected expression before ‘{’ token
+  119 |       arrayCol[x] = {0};
+      |                     ^
+sudoku.c:120:21: error: expected expression before ‘{’ token
+  120 |       arraySub[x] = {0};
+      |                     ^
+Compilation failed
+5a66615
