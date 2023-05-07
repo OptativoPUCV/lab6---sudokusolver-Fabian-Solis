@@ -111,7 +111,7 @@ List* get_adj_nodes(Node* n)
     if(validar == 1 && is_valid(nodoAdyacente)) pushBack(list, nodoAdyacente);
   } 
   
-  return NULL;
+  return list;
 }
 
 int is_final(Node* n)
