@@ -376,3 +376,14 @@ sudoku.c:89:11: error: unused variable ‘nodoAdyacente’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 0e5f0eb
+Sun 07 May 2023 03:10:23 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:104:33: error: ‘nodoAd’ undeclared (first use in this function)
+  104 |     if(validar == 1 && is_valid(nodoAd)) pushBack(list, nodoAd);
+      |                                 ^~~~~~
+sudoku.c:104:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+84bcc0e

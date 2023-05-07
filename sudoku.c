@@ -95,7 +95,7 @@ List* get_adj_nodes(Node* n)
       {
         if (n->sudo[i][j] == 0 && validar == 0) 
         {
-          nodoAd->sudo[i][j] = p;
+          nodoAdyacente->sudo[i][j] = p;
           validar = 1;
         }
       }
