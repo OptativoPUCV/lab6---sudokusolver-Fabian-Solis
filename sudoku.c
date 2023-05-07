@@ -124,6 +124,7 @@ Node* DFS(Node* initial, int* cont)
   while(top(S) != NULL) 
   {
     Node* nodo = top(S);
+    pop(S);
     
     if (is_final(nodo) == 1) return nodo;
       
