@@ -124,7 +124,6 @@ Node* DFS(Node* initial, int* cont)
   while(top(S) != NULL) 
   {
     Node* nodo = top(S);
-    pop(S);
     
     if (is_final(nodo) == 1) return nodo;
       
@@ -136,7 +135,8 @@ Node* DFS(Node* initial, int* cont)
       push(S, aux);      
       aux = next(adju);
     }
-
+    
+    free(nodo);
     (*cont)++;
   }
   
