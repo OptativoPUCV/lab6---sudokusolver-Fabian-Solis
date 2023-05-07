@@ -181,3 +181,30 @@ Sun 07 May 2023 01:58:11 AM UTC:
  tests:  5|3
 total_score: 35/70
 f22c3e3
+Sun 07 May 2023 02:00:16 AM UTC: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:118:23: error: expected expression before ‘{’ token
+  118 |       arrayFila[10] = {0};
+      |                       ^
+sudoku.c:119:22: error: expected expression before ‘{’ token
+  119 |       arrayCol[10] = {0};
+      |                      ^
+sudoku.c:120:22: error: expected expression before ‘{’ token
+  120 |       arraySub[10] = {0};
+      |                      ^
+sudoku.c:140:18: error: ‘k’ undeclared (first use in this function)
+  140 |       if(n->sudo[k][p] != 0)
+      |                  ^
+sudoku.c:140:18: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:140:21: error: ‘p’ undeclared (first use in this function)
+  140 |       if(n->sudo[k][p] != 0)
+      |                     ^
+sudoku.c:114:9: error: variable ‘arraySub’ set but not used [-Werror=unused-but-set-variable]
+  114 |     int arraySub[10] = {0};
+      |         ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7c03b35
