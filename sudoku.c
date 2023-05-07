@@ -103,11 +103,50 @@ List* get_adj_nodes(Node* n)
   return list;
 }
 
-int is_final(Node* n){
-    return 0;
+int is_final(Node* n)
+{
+
+  
+  for(int i = 0 ; i < 9 ; i++) 
+  {
+    for(int x = 0 ; x < 10 ; x++) 
+    {
+      int arrayFila;
+      int arrayCol[10];
+      int arraySub[10];
+    }
+    
+    for(int j = 0 ; j < 9 ; j++) 
+    {
+
+      if(n->sudo[i][j] != 0) 
+      {
+        if(arrayFila[n->sudo[i][j]] == 1) return 0;
+        else arrayFila[n->sudo[i][j]] = 1;
+      }
+
+      if(n->sudo[j][i] != 0) 
+      {
+        if(arrayCol[n->sudo[j][i]] == 1) return 0;
+        else arrayCol[n->sudo[j][i]] = 1;
+      }
+      
+      int k = 3*(i/3) + j/3;
+      int p = 3*(i%3) + j%3;
+
+      if(n->sudo[k][p] != 0) 
+      {
+        if(arraySub[n->sudo[k][p]] == 1) return 0;
+        else arraySub[n->sudo[k][p]] = 1;
+      }
+    }
+  }
+  
+  return 0;
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
   return NULL;
 }
 
