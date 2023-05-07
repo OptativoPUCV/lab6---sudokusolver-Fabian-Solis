@@ -111,7 +111,7 @@ int is_final(Node* n)
   {
     for(int x = 0 ; x < 10 ; x++) 
     {
-      int arrayFila;
+      int arrayFila[10];
       int arrayCol[10];
       int arraySub[10];
     }

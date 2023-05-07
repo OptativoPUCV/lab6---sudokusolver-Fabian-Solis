@@ -142,3 +142,30 @@ sudoku.c:139:12: error: ‘arraySub’ undeclared (first use in this function)
 cc1: all warnings being treated as errors
 Compilation failed
 a6bdf6e
+Sun 07 May 2023 01:56:00 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:116:11: error: unused variable ‘arraySub’ [-Werror=unused-variable]
+  116 |       int arraySub[10];
+      |           ^~~~~~~~
+sudoku.c:115:11: error: unused variable ‘arrayCol’ [-Werror=unused-variable]
+  115 |       int arrayCol[10];
+      |           ^~~~~~~~
+sudoku.c:114:11: error: unused variable ‘arrayFila’ [-Werror=unused-variable]
+  114 |       int arrayFila[10];
+      |           ^~~~~~~~~
+sudoku.c:124:12: error: ‘arrayFila’ undeclared (first use in this function)
+  124 |         if(arrayFila[n->sudo[i][j]] == 1) return 0;
+      |            ^~~~~~~~~
+sudoku.c:124:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:130:12: error: ‘arrayCol’ undeclared (first use in this function)
+  130 |         if(arrayCol[n->sudo[j][i]] == 1) return 0;
+      |            ^~~~~~~~
+sudoku.c:139:12: error: ‘arraySub’ undeclared (first use in this function)
+  139 |         if(arraySub[n->sudo[k][p]] == 1) return 0;
+      |            ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+df3be06
