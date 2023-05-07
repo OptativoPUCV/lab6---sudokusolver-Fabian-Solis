@@ -105,14 +105,12 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-
+  int arrayFila[10];
+  int arrayCol[10];
+  int arraySub[10];
   
   for(int f = 0 ; f < 9 ; f++) 
   {
-    int arrayFila[10];
-    int arrayCol[10];
-    int arraySub[10];
-    
     for(int x = 0 ; x < 10 ; x++) 
     {
       arrayFila[x] = 0;
