@@ -45,12 +45,19 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
+  int arrayFila[10];
+  int arrayCol[10]; 
+  int arraySub[10];
+  
   for(int f = 0 ; f < 9 ; f++) 
   {
-    int arrayFila[10] = {0};
-    int arrayCol[10] = {0};
-    int arraySub[10] = {0};
-
+    for(int i = 0 ; i < 10 ; i++) 
+    {
+      arrayFila[i] = 0;
+      arrayCol[i] = 0;
+      arraySub[i] = 0;
+    }
+    
     for(int c = 0 ; c < 9 ; c++) 
     {
       if(n->sudo[f][c] != 0) 
@@ -58,16 +65,16 @@ int is_valid(Node* n)
         if(arrayFila[n->sudo[f][c]] == 1) return 0;
         else arrayFila[n->sudo[f][c]] = 1;
       }
-  
+
       if(n->sudo[f][c] != 0) 
       {
         if(arrayCol[n->sudo[f][c]] == 1) return 0;
         else arrayCol[n->sudo[f][c]] = 1;
       }
-  
+      
       int k = 3*(f/3) + c/3;
       int p = 3*(f%3) + c%3;
-  
+
       if(n->sudo[k][p] != 0) 
       {
         if(arraySub[n->sudo[k][p]] == 1) return 0;
@@ -75,7 +82,7 @@ int is_valid(Node* n)
       }
     }
   }
-  
+ 
   return 1;
 }
 
