@@ -84,21 +84,23 @@ List* get_adj_nodes(Node* n)
 {
   List* list=createList();
 
-  for(int f = 0; f < 9; f++)
-  {
-    for(int c = 0; c < 9; c++)
-    {
-      if(n -> sudo[f][c] == 0)
-      {
-        for(int i = 1; i <= 9; i++)
-        {
-          Node *newNode = copy(n);
-          newNode -> sudo[f][c] = i;
-          pushBack(list, newNode);
+  for (int p = 1 ; p <= 9 ; p++) {
+    Node* nodoAd = copy(n);
+    int validar = 0;
+    for (int i = 0 ; i < 9 ; i++) {
+      for (int j = 0 ; j < 9 ; j++) {
+        if (n->sudo[i][j] == 0 && validar == 0) {
+          nodoAd->sudo[i][j] = p;
+          validar = 1;
         }
       }
     }
-  }
+
+    if(validar == 1 && is_valid(nodoAd)) pushBack(list, nodoAd);
+
+  } 
+
+
   
   return list;
 }
@@ -118,28 +120,7 @@ int is_final(Node* n)
 
 Node* DFS(Node* initial, int* cont)
 {
-  Stack* S = createStack();
-  push(S, initial);
   
-  while(top(S) != NULL) 
-  {
-    Node* nodo = top(S);
-    pop(S);
-    
-    if (is_final(nodo) == 1) return nodo;
-      
-    List* adju = get_adj_nodes(nodo);
-    Node* aux = first(adju);
-    
-    while(aux != NULL) 
-    {
-      push(S, aux);      
-      aux = next(adju);
-    }
-    
-    free(nodo);
-    (*cont)++;
-  }
   
   return NULL;
 }
