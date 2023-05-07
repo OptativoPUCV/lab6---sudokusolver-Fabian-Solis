@@ -387,3 +387,9 @@ sudoku.c:104:33: error: ‘nodoAd’ undeclared (first use in this function)
 sudoku.c:104:33: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 84bcc0e
+Sun 07 May 2023 03:10:34 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 55/70
+8aff1d4
