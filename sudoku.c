@@ -140,13 +140,13 @@ Node* DFS(Node* initial, int* cont)
     
     if (is_final(node) == 1) return node;
     
-    List* adj = get_adj_nodes(node);
-    Node* aux = first(adj);
+    List* adju = get_adj_nodes(node);
+    Node* aux = first(adju);
     
     while(aux != NULL) 
     {
       push(S, aux);      
-      aux = next(adj);
+      aux = next(adju);
     }
     
     free(node);
