@@ -105,45 +105,12 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-  int arrayFila[10];
-  int arrayCol[10];
-  int arraySub[10];
   
-  for(int f = 0 ; f < 9 ; f++) 
-  {
-    for(int x = 0 ; x < 10 ; x++) 
-    {
-      arrayFila[x] = 0;
-      arrayCol[x] = 0;
-      arraySub[x] = 0;
-    }
-    
-    for(int c = 0 ; c < 9 ; c++) 
-    {
-
-      if(n->sudo[f][c] != 0) 
-      {
-        if(arrayFila[n->sudo[f][c]] == 1) return 0;
-        else arrayFila[n->sudo[f][c]] = 1;
-      }
-
-      if(n->sudo[f][c] != 0) 
-      {
-        if(arrayCol[n->sudo[f][c]] == 1) return 0;
-        else arrayCol[n->sudo[f][c]] = 1;
-      }
-      
-      int k = 3*(f/3) + c/3;
-      int p = 3*(f%3) + c%3;
-
-      if(n->sudo[k][p] != 0) 
-      {
-        if(arraySub[n->sudo[k][p]] == 1) return 0;
-        else arraySub[n->sudo[k][p]] = 1;
-      }
+  for(int i = 0 ; i < 9 ; i++) {
+    for(int j = 0 ; j < 9 ; j++) {
+      if(n->sudo[i][j] == 0) return 0;
     }
   }
-  
   return 0;
 }
 
