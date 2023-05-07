@@ -86,7 +86,7 @@ List* get_adj_nodes(Node* n)
 
   for (int p = 1 ; p <= 9 ; p++) 
   {
-    Node* nodoAd = copy(n);
+    Node* nodoAdyacente = copy(n);
     int validar = 0;
     
     for (int i = 0 ; i < 9 ; i++) 
@@ -100,11 +100,9 @@ List* get_adj_nodes(Node* n)
         }
       }
     }
-
-
+    
+    if(validar == 1 && is_valid(nodoAd)) pushBack(list, nodoAd);
   } 
-
-
   
   return list;
 }
