@@ -113,12 +113,7 @@ int is_final(Node* n)
     int arrayCol[10];
     int arraySub[10];
     
-    for(int x = 0 ; x < 10 ; x++) 
-    {
-      arrayFila = {0};
-      arrayCol = {0};
-      arraySub = {0};
-    }
+
     
     for(int c = 0 ; c < 9 ; c++) 
     {
