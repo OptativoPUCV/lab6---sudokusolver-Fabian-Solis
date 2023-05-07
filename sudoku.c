@@ -66,7 +66,7 @@ int is_valid(Node* n)
         else arrayFila[n->sudo[f][c]] = 1;
       }
 
-      if(n->sudo[f][c] != 0) 
+      if(n->sudo[c][f] != 0) 
       {
         if(arrayCol[n->sudo[f][c]] == 1) return 0;
         else arrayCol[n->sudo[f][c]] = 1;
@@ -140,13 +140,13 @@ Node* DFS(Node* initial, int* cont)
     
     if (is_final(node) == 1) return node;
     
-    List* adju = get_adj_nodes(node);
-    Node* aux = first(adju);
+    List* adj = get_adj_nodes(node);
+    Node* aux = first(adj);
     
     while(aux != NULL) 
     {
       push(S, aux);      
-      aux = next(adju);
+      aux = next(adj);
     }
     
     free(node);
